@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "repairs",
+  "info": {
+    "singularName": "repair",
+    "pluralName": "repairs",
+    "displayName": "Repair",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "device": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::device.device",
+      "inversedBy": "repairs"
+    },
+    "repair_name": {
+      "type": "string"
+    },
+    "repair_description": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    }
+  }
+}
